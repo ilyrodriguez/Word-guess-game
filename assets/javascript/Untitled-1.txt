@@ -15,7 +15,7 @@ var computerChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
-var guesses = [];
+var userGuess = [];
 
 //reset to start the game again
 // function reset() {
@@ -41,8 +41,7 @@ var guesses = [];
 
 function pickRandom() {
     guessesLeft = 9;
-    guesses = [];
-    document.getElementById('user-guess').textContent = " ";
+    userGuess = [];
     computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
     console.log(computerGuess);
 }
@@ -74,8 +73,6 @@ document.onkeypress = function (event) {
 
     else {
       guessesLeft--;
-      guesses.push(userGuess);
-    //   userGuess=" ";
     }
 
     if (wins === 10) {
