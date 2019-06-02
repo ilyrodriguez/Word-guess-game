@@ -3,25 +3,101 @@ body, html {
     background-position: top;
     background-repeat: no-repeat;
     background-size: 100%;
+    font-family: 'Macondo Swash Caps', cursive !important;
 }
-
-
-h1 {
-    text-align: center;
-    font-variant: small-caps;
+nav{
     background-color: rgba(69, 26, 170, 0.5);
-    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    font-variant: small-caps;
+    padding: 5px;
     color: rgb(243, 221, 98);
+    font-size: 70px !important;
+    text-shadow: -2px -2px 0 rgb(249, 250, 221),
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
+    /* -3px 0 0 rgba(1, 96, 116, 1),
+    3px 0 0 rgba(1, 96, 116, 1),
+    0 -3px 0 rgba(1, 96, 116, 1),
+    0 3px 0 rgba(1, 96, 116, 1); */
+    margin-left: 50px;
 }
 
-h3 {
-    text-align: center;
-    font-style: italic;  
+#second-header {
+    margin-left: 490px; 
+    margin-top: 20px;   
+    font-size: 35px;
     color: white;
+}
+.game-area{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.fa-star-of-david{
+    font-size: 40px;
+    color: rgb(243, 221, 98);
+    margin-left: 55px;
+    margin-right: 40px;
+    text-shadow: 
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
+}
+.fa-eye{
+    font-size: 40px;
+    color: rgb(243, 221, 98);
+    margin-left: 75px;
+    margin-right: 40px;
+    text-shadow: 
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
+}
+.fa-sun{
+    font-size: 40px;
+    color: rgb(243, 221, 98);
+    margin-left: 75px;
+    margin-right: 60px;
+    text-shadow: 
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
+}
+.fa-hand-paper{
+    font-size: 40px;
+    color: rgb(243, 221, 98);
+    margin-left: 75px;
+    margin-right: 40px;
+    text-shadow: 
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
+}
+.fa-moon{
+    font-size: 40px;
+    color: rgb(243, 221, 98);
+    margin-left: 75px;
+    margin-right: 40px;
+    text-shadow: 
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
+}
+.fa-ankh{
+    font-size: 40px;
+    color: rgb(243, 221, 98);
+    margin-left: 75px;
+    text-shadow: 
+    2px -2px 0 rgb(0, 33, 39),
+    -2px 2px 0 rgb(0, 4, 5),
+    2px 2px 0 rgb(132, 68, 168);
 }
 
 h4 {
-    margin: 60px;
+    margin-left: 60px;
     padding-bottom: 10px;
     padding: 10px;
     color: white;
