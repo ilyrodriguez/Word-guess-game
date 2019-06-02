@@ -28,13 +28,14 @@ h1 {
 
 #second-header {
     margin-left: 490px; 
-    margin-top: 20px;   
+    margin-top: 15px;   
     font-size: 35px;
-    color: white;
+    color: rgb(243, 221, 98);
 }
 .game-area{
     margin-left: 100px;
-    margin-top: 20px;
+    margin-top: 60px;
+    font-size: 40px;
 }
 .fa-star-of-david{
     font-size: 40px;
@@ -100,6 +101,7 @@ h4 {
     margin-left: 60px;
     padding-bottom: 10px;
     padding: 10px;
+    font-size: 40px;
     color: white;
 }
 
