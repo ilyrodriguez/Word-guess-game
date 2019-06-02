@@ -14,4 +14,5 @@ March 2019
 
 - HTML
 - CSS
+- Bootstrap
 - Javascript
