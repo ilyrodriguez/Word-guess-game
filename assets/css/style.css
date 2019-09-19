@@ -27,9 +27,9 @@ h1 {
 }
 
 #second-header {
-    margin-left: 490px; 
+    margin-left: 465px; 
     margin-top: 15px;   
-    font-size: 35px;
+    font-size: 40px;
     color: rgb(243, 221, 98);
 }
 .game-area{
@@ -101,8 +101,13 @@ h4 {
     margin-left: 60px;
     padding-bottom: 10px;
     padding: 10px;
-    font-size: 40px;
+    font-size: 35px !important;
     color: white;
+}
+
+#user-guess{
+    font-size: 40px;
+    letter-spacing: 15px;
 }
 
 footer {
