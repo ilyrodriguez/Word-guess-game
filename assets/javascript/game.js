@@ -1,11 +1,15 @@
-confirm("                           -  WELCOME TO THE PSYCHIC GAME  -    \n" +
-    "                                guess what letter I'm thinking of?\n" +
-    "\n" +
-    "                     You have up to 10 guesses to win or lose a point\n" +
-    "                              Win 10 points and you are a Psychic\n" +
-    "                               Loose 10 points and is game over\n" +
-    "\n" +
-    "                                   WOULD YOU LIKE TO PLAY?");
+// confirm("                           -  WELCOME TO THE PSYCHIC GAME  -    \n" +
+//     "                                guess what letter I'm thinking of?\n" +
+//     "\n" +
+//     "                     You have up to 10 guesses to win or lose a point\n" +
+//     "                              Win 10 points and you are a Psychic\n" +
+//     "                               Loose 10 points and is game over\n" +
+//     "\n" +
+//     "                                   WOULD YOU LIKE TO PLAY?");
+
+$(document).ready(function(){
+    $('#myModal').modal('show');
+});
 
 // Array of letters
 var computerChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];

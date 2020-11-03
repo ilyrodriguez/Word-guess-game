@@ -5,11 +5,17 @@ body, html {
     background-size: 100%;
     font-family: 'Macondo Swash Caps', cursive !important;
 }
+
+.container-fluid{
+    padding: 0 !important; 
+}
+
 nav{
     background-color: rgba(69, 26, 170, 0.5);
     width: 100%;
     text-align: center;
 }
+
 h1 {
     font-variant: small-caps;
     padding: 5px;
@@ -108,6 +114,7 @@ h4 {
 #user-guess{
     font-size: 40px;
     letter-spacing: 15px;
+    margin-left: 20px;
 }
 
 footer {
