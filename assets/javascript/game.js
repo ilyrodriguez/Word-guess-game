@@ -28,7 +28,7 @@ function pickRandom() {
     console.log(computerGuess);
 }
 function countGuessesLeft() {
-	document.querySelector("#guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
+	document.querySelector("#guessesLeft").innerHTML = " " + guessesLeft;
 }
 
 pickRandom();
@@ -71,8 +71,20 @@ document.onkeypress = function (event) {
         guesses = [];
     }
 
-    document.getElementById('wins').innerHTML = "Wins: " + wins;
-    document.getElementById('losses').innerHTML = "losses: " + losses;
-    document.getElementById('guessesLeft').innerHTML = "Guesses left: " + guessesLeft;
+    document.getElementById('wins').innerHTML = " " + wins;
+    document.getElementById('losses').innerHTML = " " + losses;
+    document.getElementById('guessesLeft').innerHTML = " " + guessesLeft;
 
 }
+
+$('.btn-close').click(function (e) { 
+        // e.preventDefault();
+        $('.game-area').addClass('d-none');
+        $('.changed-mind').removeClass('d-none'); 
+    });
+
+    $('.play-button').click(function (e) { 
+        // e.preventDefault();
+        $('.game-area').removeClass('d-none');
+        $('.changed-mind').addClass('d-none'); 
+    });

@@ -10,6 +10,7 @@
 
 <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 <!-- FONT AWESOME ICONS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -21,23 +22,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
     <title>Psychic Game</title>
 </head>
 
 <body>
-        <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg">
-                   <span><h1><i class="fas fa-star-of-david"></i><i class="far fa-eye"></i><i class="fas fa-sun"></i>Psychic Game<i class="far fa-hand-paper"></i><i class="far fa-moon"></i><i class="fas fa-ankh"></i></h1></span> 
-                </nav>
-        <h3 id="second-header">Guess what letter I'm thinking of</h3>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+           <h1><i class="fas fa-star-of-david"></i><i class="far fa-eye"></i><i class="fas fa-sun"></i>Psychic Game<i class="far fa-hand-paper"></i><i class="far fa-moon"></i><i class="fas fa-ankh"></i></h1>
+        </nav>
         <div class="game-area">
-        <h4 id="wins">Wins:</h4>
-        <h4 id="losses"> Losses:</h4>
-        <h4 id="guessesLeft">Guesses left:</h4>
-        <div class="type">
-            <h4>Your guesses so far: <span  id="user-guess"></span></h4>
+            <h3 id="second-header">Guess what letter I'm thinking of</h3>
+            <div class="guess-letters">
+                <h3>Your guesses so far: </h3>
+                <p  id="user-guess"></p>
+            </div>
+            <div class="container stats">
+                <h3>Wins: <span id="wins"></span></h3>
+                <h3> Losses:  <span id="losses"></span></h3>
+                <h3>Guesses left: <span id="guessesLeft"></span></h3>
+           </div>
         </div>
-    </div>
+            <div class="changed-mind text-center d-none">
+                <h3 class="play-heading">I changed my mind</h3>
+                <p>I want to try my luck</p>
+            
+                 <button class="btn play-button">Play</button>
+            </div>
     </div>
 
     <!-- MODAL -->
@@ -45,17 +61,21 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
+              <h4 class="modal-title">Welcome to the Psychic Game</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Modal body text goes here.</p>
+                <p class="dark-blue"><strong> Guess what letter I'm thinking of? </strong></p>
+              <p>You have up to 10 guesses to win or lose a point. <br>
+                  Win 10 points and you are a Psychic <br>
+                  Loose 10 points and is game over <br>
+                  <span class="modal-question">WOULD YOU LIKE TO PLAY?</span></p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+                <a href="#" class="tooltip-test" title="Close this window"><button type="button" class="btn btn-close btn-secondary" data-dismiss="modal">Close</button></a>
+              <button type="button" class="btn btn-continue">Play</button>
             </div>
           </div>
         </div>
