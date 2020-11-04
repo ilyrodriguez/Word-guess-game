@@ -40,7 +40,10 @@ document.onkeypress = function (event) {
 
     if (userGuess === computerGuess) {
         wins++;
-        alert(" You win 1 point ");
+        $('#myModal').modal('show');
+        $('.game-invite').addClass('d-none');
+        $('.one-point-content').removeClass('d-none');
+        // alert(" You win 1 point ");
         pickRandom();
     } 
 
@@ -55,15 +58,23 @@ document.onkeypress = function (event) {
     }
 
     if (wins === 10) {
-        alert("                                  -     CONGRATULATIONS    -\n " +
-            "                                      You are a real Psychic! ");
+        $('#myModal').modal('show');
+        $('.game-invite').addClass('d-none');
+        $('.win-content').removeClass('d-none')
+
+        // alert("                                  -     CONGRATULATIONS    -\n " +
+        //     "                                      You are a real Psychic! ");
         console.log(wins);
     }
   
 
     if (losses === 10) {
-        alert("                                         -    GAME OVER   -\n" +
-            "                                         You are no Psychic! ");
+        // alert("                                         -    GAME OVER   -\n" +
+        //     "                                         You are no Psychic! ");
+        $('#myModal').modal('show');
+        $('.game-invite').addClass('d-none');
+        $('.gameover-content').removeClass('d-none');
+        $('.one-point-content').addClass('d-none');
         console.log(losses);
         wins = 0;
         losses = 0;

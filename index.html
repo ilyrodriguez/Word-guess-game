@@ -39,7 +39,7 @@
         <div class="game-area">
             <h3 id="second-header">Guess what letter I'm thinking of</h3>
             <div class="guess-letters">
-                <h3>Your guesses so far: </h3>
+                <h2>Your guesses so far: </h2>
                 <p  id="user-guess"></p>
             </div>
             <div class="container stats">
@@ -56,10 +56,11 @@
             </div>
     </div>
 
-    <!-- MODAL -->
+    <!-- START GAME MODAL -->
       <div class="modal" tabindex="-1" id="myModal">
         <div class="modal-dialog">
-          <div class="modal-content">
+            <!-- GAME INVITE MODAL CONTENT  -->
+          <div class="modal-content game-invite">
             <div class="modal-header">
               <h4 class="modal-title">Welcome to the Psychic Game</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -76,6 +77,52 @@
             <div class="modal-footer">
                 <a href="#" class="tooltip-test" title="Close this window"><button type="button" class="btn btn-close btn-secondary" data-dismiss="modal">Close</button></a>
               <button type="button" class="btn btn-continue">Play</button>
+            </div>
+          </div>
+
+          <!-- WIN ALERT MODAL CONTENT  -->
+          <div class="modal-content win-content d-none">
+            <div class="modal-header">
+              <h4 class="modal-title">Welcome to the Psychic Game</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p class="dark-blue"><strong> CONGRATULATIONS </strong></p>
+              <p> You are a real Psychic! 
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="tooltip-test" title="Close this window"><button type="button" class="btn btn-close btn-secondary" data-dismiss="modal">Close</button></a>
+              <button type="button" class="btn btn-continue">Play</button>
+            </div>
+          </div>
+
+          <!-- GAME OVER ALERT MODAL CONTENT  -->
+          <div class="modal-content gameover-content d-none">
+            <div class="modal-header justify-content-center">
+              <h4 class="modal-title">Psychic Game</h4>
+            </div>
+            <div class="modal-body">
+                    <h5> GAME OVER</h5> <br>
+                  <h6>You are no Psychic!</h6>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="tooltip-test" title="Close this window"><button type="button" class="btn btn-close btn-secondary" data-dismiss="modal">Close</button></a>
+              <button type="button" class="btn btn-continue">Play</button>
+            </div>
+          </div>
+
+           <!-- ONE POINT WIN ALERT MODAL CONTENT  -->
+           <div class="modal-content one-point-content d-none">
+            <div class="modal-header justify-content-center">
+              <h4 class="modal-title">Psychic Game</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h5> You win 1 point <br>
             </div>
           </div>
         </div>
