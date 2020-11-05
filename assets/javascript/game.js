@@ -9,6 +9,7 @@
 
 $(document).ready(function(){
     $('#myModal').modal('show');
+    disableKeyboard();
 });
 
 // Array of letters
@@ -20,6 +21,7 @@ var losses = 0;
 var guessesLeft = 9;
 var guesses = [];
 
+
 function pickRandom() {
     guessesLeft = 9;
     guesses = [];
@@ -27,6 +29,7 @@ function pickRandom() {
     computerGuess = computerChoice[Math.floor(Math.random() * computerChoice.length)];
     console.log(computerGuess);
 }
+
 function countGuessesLeft() {
 	document.querySelector("#guessesLeft").innerHTML = " " + guessesLeft;
 }
@@ -34,15 +37,18 @@ function countGuessesLeft() {
 pickRandom();
 document.getElementById('guessesLeft').innerHTML += " " + guessesLeft;
 
+// FUNCTION ON KEYBOARD PRESS BEHAVIOR :
 document.onkeypress = function (event) {
+
+    // WHILE PLAYING IF POINT WIN MODAL DISPLAYS ANY KEYBOARD PRESSED WILL CLOSE MODAL:
+    $('.close-point-btn').click();
+
     var userGuess = event.key.toLocaleLowerCase();
     document.getElementById('user-guess').innerHTML += userGuess;
 
     if (userGuess === computerGuess) {
         wins++;
-        $('#myModal').modal('show');
-        $('.game-invite').addClass('d-none');
-        $('.one-point-content').removeClass('d-none');
+        $('#pointModal').modal('show');
         // alert(" You win 1 point ");
         pickRandom();
     } 
@@ -59,11 +65,17 @@ document.onkeypress = function (event) {
 
     if (wins === 10) {
         $('#myModal').modal('show');
+        // SPECIFIC CONTENT IN MODAL WILL DISPLAY/HIDE BASED ON WHAT HAPPENED IN THE GAME:
         $('.game-invite').addClass('d-none');
-        $('.win-content').removeClass('d-none')
-
+        $('.win-content').removeClass('d-none');
+        // DISABLE THE KEYBOARD WHEN GAME OVER MODAL IS SHOWING:
+        disableKeyboard();
         // alert("                                  -     CONGRATULATIONS    -\n " +
         //     "                                      You are a real Psychic! ");
+        wins = 0;
+        losses = 0;
+        userGuess = 9;
+        guesses = [];
         console.log(wins);
     }
   
@@ -72,30 +84,58 @@ document.onkeypress = function (event) {
         // alert("                                         -    GAME OVER   -\n" +
         //     "                                         You are no Psychic! ");
         $('#myModal').modal('show');
+        // SPECIFIC CONTENT IN MODAL WILL DISPLAY/HIDE BASED ON WHAT HAPPENED IN THE GAME:
         $('.game-invite').addClass('d-none');
         $('.gameover-content').removeClass('d-none');
-        $('.one-point-content').addClass('d-none');
-        console.log(losses);
+        // DISABLE THE KEYBOARD WHEN GAME OVER MODAL IS SHOWING:
+        disableKeyboard();
         wins = 0;
         losses = 0;
         userGuess = 9;
         guesses = [];
+        console.log(losses);
     }
 
     document.getElementById('wins').innerHTML = " " + wins;
     document.getElementById('losses').innerHTML = " " + losses;
     document.getElementById('guessesLeft').innerHTML = " " + guessesLeft;
-
 }
 
 $('.btn-close').click(function (e) { 
         // e.preventDefault();
         $('.game-area').addClass('d-none');
         $('.changed-mind').removeClass('d-none'); 
+        disableKeyboard();
     });
 
     $('.play-button').click(function (e) { 
         // e.preventDefault();
+        // enable keyboard if player chooses to play:
+        enableKeyboard();
         $('.game-area').removeClass('d-none');
         $('.changed-mind').addClass('d-none'); 
     });
+
+    $('.btn-continue').click(function (e) { 
+        // e.preventDefault();
+        // enable keyboard if player chooses to play:
+        enableKeyboard();
+        // SPECIFIC CONTENT IN MODAL WILL DISPLAY/HIDE BASED ON WHAT HAPPENED IN THE GAME:
+        $('.game-area').removeClass('d-none');
+        $('.changed-mind').addClass('d-none'); 
+        $('#myModal').modal('hide');
+    });
+
+    //  DISABLE THE KEYBOARD UNTIL CHOOSING TO PLAY:
+    function disableKeyboard(){
+        document.onkeydown = function (e) {
+            return false;
+        }
+    }
+
+     // ENABLE THE KEYBOARD UNTIL CHOOSING TO PLAY:
+     function enableKeyboard(){
+        document.onkeydown = function (e) {
+            return true;
+        }
+    }
